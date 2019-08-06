@@ -23,7 +23,7 @@ public class BaseballController {
 	/**
 	 * チームリストのviewに遷移させるメソッドです.
 	 * 
-	 * @param model
+	 * @param model リクエストスコープ
 	 * @return チームリスト
 	 */
 	@RequestMapping("")

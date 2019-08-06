@@ -10,7 +10,7 @@ import com.example2.Domein.BaseballTeam;
 import com.example2.Repository.BaseballRepository;
 
 /**
- * リポジトリクラスを操作するクラスです.
+ * チーム情報を操作するサービスクラスです.
  * 
  * @author yukihiro.yokogawa
  *
