@@ -28,8 +28,8 @@ public class BaseballRepository {
 		baseballteam.setId(rs.getInt("id"));
 		baseballteam.setLeagueName(rs.getString("league_name"));
 		baseballteam.setTeamName(rs.getString("team_name"));
-		baseballteam.setHeadquaters(rs.getString("headquaters"));
-		baseballteam.setInauguation(rs.getString("inauguation"));
+		baseballteam.setHeadquarters(rs.getString("headquarters"));
+		baseballteam.setInauguration(rs.getString("inauguration"));
 		baseballteam.setHistory(rs.getString("history"));
 		return baseballteam;
 	};
@@ -40,7 +40,7 @@ public class BaseballRepository {
 	 * @return チームリスト
 	 */
 	public List<BaseballTeam> findByAll() {
-		String sql = "SELECT league_name FROM teams ORDER BY inauguation";
+		String sql = "SELECT id,league_name,team_name,headquarters,inauguration,history FROM teams ORDER BY inauguration";
 
 		List<BaseballTeam> teamList = template.query(sql, BASEBALLTEAM_ROW_MAPPER);
 
@@ -54,7 +54,7 @@ public class BaseballRepository {
 	 * @return 野球チームの詳細情報
 	 */
 	public BaseballTeam load(Integer id) {
-		String sql = "SELECT league_name,team_name,headquaters,inauguation,history FROM teams WHERE id=:id";
+		String sql = "SELECT team_name FROM teams WHERE id=:id";
 
 		SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
 

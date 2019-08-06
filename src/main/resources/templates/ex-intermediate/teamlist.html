@@ -2,9 +2,10 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>チームリスト</title>
 </head>
 <body>
-サンプル
+	<h1>野球チーム一覧</h1>
+	<p th:each="team:${teamlist}"><a href=# th:text="${team.teamName}" th:href="@{'/teamlist/showdetail?id=' + ${team.id}}"></a></p>
 </body>
 </html>

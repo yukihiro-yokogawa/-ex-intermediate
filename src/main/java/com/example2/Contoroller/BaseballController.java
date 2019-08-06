@@ -7,17 +7,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example2.Service.BaseballService;
 
+/**
+ * 球団情報に関するドメインを操作するコントローラークラスです.
+ * 
+ * @author yukihiro.yokogawa
+ *
+ */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/teamlist")
 public class BaseballController {
 
 	@Autowired
 	public BaseballService baseballservice;
 	
-	@RequestMapping("/teamlist")
+	/**
+	 * チームリストのviewに遷移させるメソッドです.
+	 * 
+	 * @param model
+	 * @return チームリスト
+	 */
+	@RequestMapping("")
 	public String teamlist(Model model) {
 		model.addAttribute("teamlist",baseballservice.findByAll());
-		return "teamlist";
+		return "ex-intermediate/teamlist";
 	}
 	
 }

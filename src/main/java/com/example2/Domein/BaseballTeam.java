@@ -15,16 +15,16 @@ public class BaseballTeam {
 	/** チーム名 */
 	String teamName;
 	/** 本拠地 */
-	String headquaters;
+	String headquarters;
 	/**	球団設立日 */
-	String inauguation;
+	String inauguration;
 	/**	歴史 */
 	String history;
 
 	@Override
 	public String toString() {
 		return "BaseballTeam [id=" + id + ", leagueName=" + leagueName + ", teamName=" + teamName + ", headquaters="
-				+ headquaters + ", inauguation=" + inauguation + ", history=" + history + "]";
+				+ headquarters + ", inauguation=" + inauguration + ", history=" + history + "]";
 	}
 
 	public Integer getId() {
@@ -51,20 +51,20 @@ public class BaseballTeam {
 		this.teamName = teamName;
 	}
 
-	public String getHeadquaters() {
-		return headquaters;
+	public String getHeadquarters() {
+		return headquarters;
 	}
 
-	public void setHeadquaters(String headquaters) {
-		this.headquaters = headquaters;
+	public void setHeadquarters(String headquaters) {
+		this.headquarters = headquaters;
 	}
 
-	public String getInauguation() {
-		return inauguation;
+	public String getInauguration() {
+		return inauguration;
 	}
 
-	public void setInauguation(String inauguation) {
-		this.inauguation = inauguation;
+	public void setInauguration(String inauguation) {
+		this.inauguration = inauguation;
 	}
 
 	public String getHistory() {
