@@ -27,8 +27,8 @@ public class BaseballService {
 	 * 
 	 * @return チームリスト
 	 */
-	public List<BaseballTeam> findByAll() {
-		return repository.findByAll();
+	public List<BaseballTeam> showList() {
+		return repository.showList();
 	}
 	
 	/**
@@ -37,8 +37,8 @@ public class BaseballService {
 	 * @param id 球団ID
 	 * @return チームの詳細情報
 	 */
-	public BaseballTeam load(Integer id) {
-		return repository.load(id);
+	public BaseballTeam showDetail(Integer id) {
+		return repository.showDetail(id);
 	}
 	
 }

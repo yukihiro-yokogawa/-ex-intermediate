@@ -39,7 +39,7 @@ public class BaseballRepository {
 	 * 
 	 * @return チームリスト
 	 */
-	public List<BaseballTeam> findByAll() {
+	public List<BaseballTeam> showList() {
 		String sql = "SELECT id,league_name,team_name,headquarters,inauguration,history FROM teams ORDER BY inauguration";
 
 		List<BaseballTeam> teamList = template.query(sql, BASEBALLTEAM_ROW_MAPPER);
@@ -53,8 +53,8 @@ public class BaseballRepository {
 	 * @param id 球団id
 	 * @return 野球チームの詳細情報
 	 */
-	public BaseballTeam load(Integer id) {
-		String sql = "SELECT team_name FROM teams WHERE id=:id";
+	public BaseballTeam showDetail(Integer id) {
+		String sql = "SELECT id,league_name,team_name,headquarters,inauguration,history FROM teams WHERE id=:id";
 
 		SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
 

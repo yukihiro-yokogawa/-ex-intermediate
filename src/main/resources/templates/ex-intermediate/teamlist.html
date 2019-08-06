@@ -6,6 +6,6 @@
 </head>
 <body>
 	<h1>野球チーム一覧</h1>
-	<p th:each="team:${teamlist}"><a href=# th:text="${team.teamName}" th:href="@{'/teamlist/showdetail?id=' + ${team.id}}"></a></p>
+	<p th:each="team:${teamlist}"><a href=# th:text="${team.teamName}" th:href="@{'/teamlist/teamdetail?id=' + ${team.id}}"></a></p>
 </body>
 </html>
